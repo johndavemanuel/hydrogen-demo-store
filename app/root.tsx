@@ -136,7 +136,11 @@ function Layout({children}: {children?: React.ReactNode}) {
   const locale = data?.selectedLocale ?? DEFAULT_LOCALE;
 
   return (
-    <html lang={locale.language}>
+    <html
+      lang={locale.language}
+      data-lang={locale.language}
+      data-country={locale.country}
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
